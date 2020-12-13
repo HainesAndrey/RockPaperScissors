@@ -6,7 +6,6 @@ namespace Task3
 {
     class Program
     {
-        private readonly static MenuWorker m_menu = new MenuWorker();
         private static IConsoleGame m_game;
 
         public static void Main(string[] args)
@@ -19,7 +18,7 @@ namespace Task3
 
         private static void BuildGame()
         {
-            m_game = new RockPaperScissors(m_menu);
+            m_game = new RockPaperScissors(new MenuWorker());
             m_game.NeedToPrintMsg += PrintMsg;
         }
 
