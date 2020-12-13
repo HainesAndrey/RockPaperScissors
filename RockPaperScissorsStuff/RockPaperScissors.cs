@@ -56,7 +56,7 @@ namespace Task3.RockPaperScissorsStuff
                 CheckWinner();
         }
 
-        public void CheckWinner()
+        private void CheckWinner()
         {
             var result = m_userFigure.CompareTo(m_bot.SelectedFigure);
             var msg = $"Computer move: {m_bot.SelectedFigure.Name}\n" +
